@@ -1,0 +1,15 @@
+@import './base';
+@import './variables';
+@import './mixins';
+
+
+.container{
+    width: 100%;
+    max-width: 1620px;
+    margin: auto;
+  
+    
+}
+
+
+@forward  '/src/compenents/Header.scss';

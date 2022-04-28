@@ -1,0 +1,88 @@
+@import '/src/sass/index.scss';
+
+.home__slide{
+    width: 100%;
+    position: relative;
+    margin-bottom: 50px;
+    & img{
+        width: 100%;
+    }
+    
+    &__content{
+        position: absolute;
+        top: 30%;
+        bottom: 0px;
+        padding-left: 20px;
+
+        @include tablet{
+            position:unset;
+        }
+       
+        
+        justify-content: center;
+        left: 150px;
+
+        & h1{
+            font-size: 3.4rem;
+            color: rgb(227, 227, 227);
+            display: block;
+            padding-top: 20px;
+            @include tablet{
+                color: black;
+            }
+        }
+        & :nth-child(2){
+            padding-bottom: 40px;
+            padding-top: 0px;
+
+        }
+        
+        & span{
+            color: rgb(227, 227, 227);
+            font-size: 1.2rem;
+            display: block;
+            padding: 20px 0px;
+            @include tablet{
+                color: black;
+            }
+        }
+        & p{
+            display: block;
+            width: 500px;
+            position: absolute;
+            bottom: 20px;
+            font-size: 0.8rem;
+            color: white;
+            @include tablet{
+                color: rgb(4, 4, 4);
+                position: unset;
+                margin-top: 20px;
+                width: 96%;
+            }
+           
+        }
+        
+        .haha{
+            width: 100px;
+            border-bottom: 4px solid red;
+        }
+
+        & button{
+            cursor: pointer;
+            width: 12rem;
+            height: 3.8rem;
+            border: 1px solid red;
+            &:hover{
+                outline: 2px solid red;
+                
+            }
+            @include tablet{
+                width: 96%;
+                margin: auto;
+            }
+           
+            
+        }
+        
+    }
+}

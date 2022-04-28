@@ -1,0 +1,187 @@
+@import '/src/sass/index.scss';
+
+
+.header__banner__bg{
+    background-color: rgb(180, 179, 179);
+}
+.main__header{
+    width: 100%;
+    .header__banner{       
+            height: 37px;
+            position: relative;
+           
+            display: flex;
+            justify-content: right;
+            &__content{
+                position: absolute;
+                inset: 0;
+                text-align: center;
+                display: flex;
+                & span{
+                    margin: auto;
+                }
+
+               
+               
+           
+            }
+            &__location{
+                position: absolute;
+                inset: 0;
+                padding: 0px 40px;
+                display: flex;
+                justify-content: right;
+                align-items: center;
+                gap: 10px; 
+                @include tablet{
+                    display: none;
+                 }     
+
+                &__store{
+                    display: flex;
+                    gap: 5px;
+                    align-items: center;
+                    cursor: pointer;                    
+                    i{
+                        margin-top: 0px;
+                        font-size: 1.2rem;
+                    }
+                    &:hover span{                       
+                        text-decoration: underline;
+                       
+                    }
+                    @include tablet{
+                        font-size: 0.8rem;
+                     }
+                }
+                img{
+                    height: 20px;
+                }}
+    }
+
+    .header{
+
+
+        height: $header-height;
+        background-color: $bg-color;  
+        display: flex; 
+        align-items: center;
+        padding: 0px 40px;
+        @include tablet{
+            padding: 0px 10px;
+        }
+        &__logo{
+            @include tablet{
+                flex: 1;
+            }
+        }
+        &__logo img{
+            height: 75px;
+        }
+        &__navbar{
+            flex: 1;
+            @include tablet{
+                display: none;
+            }
+        }
+        &__navbar__item{
+             font-size: 1rem;
+             font-weight: bold;
+             margin: auto 25px;
+        }
+        &__right{
+            display: flex;
+            align-items: center;
+            gap: 35px;
+            @include tablet{
+                gap: 20px;
+            }
+            
+            &__search{
+                background-color: rgb(222, 222, 222);
+                border: 1px solid rgb(154, 154, 154);
+                position: relative;               
+                align-items: center;
+                display: flex;
+                height: 32px;
+                border-radius: 2px;
+                @include tablet{
+                    background-color:unset;
+                    border: unset;
+                }
+               
+
+                & input{
+                    background-color: rgb(222, 222, 222);
+                   
+                    border: none;
+                    font-size: 1.1rem;
+                    font-weight: 200;
+                    padding-left: 10px;
+                    outline: none;
+                    @include tablet{
+                        display: none;
+                    }
+                }
+                .search__icon{
+                   height: 100%;
+                   cursor: pointer;
+                   display: flex;
+                   & i{
+                     font-size: 1.5rem;
+                     margin: auto;
+                     padding-right: 5px;
+                    }
+                  
+                    @include tablet{
+                        & i{
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
+            &__user{
+                @include tablet{
+                    display: none;
+                }
+
+                a{  
+                    padding: 0px 10px;
+                    font-size: 1.2rem;
+                    
+                }
+                & a:hover{
+                    text-decoration: underline;
+                }
+                &__login{
+                    border-right: 1px solid #333;
+                }
+                i{
+                    font-size: 1.6rem;
+                }
+            }
+            &__cart{
+                & i{
+                    font-size: 2rem;
+                }
+
+                
+              
+                cursor: pointer;
+               
+            }
+            &__menu{
+                cursor: pointer;                
+                display: none;
+                @include tablet{
+                    display: block;
+                    & i{
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+    
+    
+}
