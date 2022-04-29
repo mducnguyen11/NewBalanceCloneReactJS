@@ -296,3 +296,4 @@ function ProductsSlide() {
 
 
 export default ProductsSlide;
+export {Product} ;

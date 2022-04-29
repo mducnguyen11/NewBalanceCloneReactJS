@@ -3,8 +3,19 @@
 
 .header__banner__bg{
     background-color: rgb(180, 179, 179);
+    position: fixed;
+    top: 0px ;
+    left: 0px;
+    right: 0px;
+    z-index: 21;
 }
 .main__header{
+    margin-top: 37px;
+    position: fixed;
+    top: 0px ;
+    z-index: 21;
+    left: 0px;
+    right: 0px;
     width: 100%;
     .header__banner{       
             height: 37px;
