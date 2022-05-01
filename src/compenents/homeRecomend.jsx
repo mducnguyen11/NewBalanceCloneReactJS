@@ -104,8 +104,8 @@ const HomeRecomend = () =>{
         spaceBetween={20}
         pagination= {false}
         navigation={{
-          nextEl:'.nextProduct',
-          prevEl: '.preProduct'
+          nextEl:'.homerecomend__nextProduct',
+          prevEl:'.homerecomend__preProduct'
         }}
         breakpoints={{
           
@@ -135,8 +135,8 @@ const HomeRecomend = () =>{
 
       <div className="productSlide__navigation">
           
-          <div className="preProduct"> <i class='bx bx-chevron-left' ></i> </div>
-          <div className="nextProduct"> <i class='bx bx-chevron-right'></i> </div>
+          <div className="homerecomend__preProduct"> <i class='bx bx-chevron-left' ></i> </div>
+          <div className="homerecomend__nextProduct"> <i class='bx bx-chevron-right'></i> </div>
       </div>
 
             </div>

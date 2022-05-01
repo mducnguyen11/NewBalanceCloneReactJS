@@ -15,4 +15,11 @@
     position: relative;
     }
 
+.dpflex{
+    display: flex
+}
+.spaceTop{
+    margin-top: $header-height + 37px;
+}
+
 @forward  '/src/compenents/Header.scss';

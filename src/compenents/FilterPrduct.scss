@@ -1,0 +1,115 @@
+@import '../sass/index.scss';
+
+
+
+.filterproduct{
+
+    & input{
+        position: absolute;
+                            opacity: 0;
+                            cursor: pointer;
+                            height: 0;
+                            width: 0; 
+                            opacity: 1;  
+                            
+    }
+
+    display: inline-block;
+    width: 25%;
+    
+   
+    padding-left: 40px;
+    padding-right: 0px;
+    margin-bottom: 50px;
+
+    & h6{
+        font-size: 0.9rem;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    & a{
+        display: block;
+        font-weight: lighter;
+        text-decoration: underline;
+        padding: 5px 0px;
+    }
+   
+    .filterproduct__linklist{
+        padding-bottom: 10px;
+        border-bottom:  1px solid rgb(146, 146, 146);
+    }
+
+    &__listoption{
+
+        &__option{
+
+            &__title{
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+                
+                & span{
+                    padding: 20px 0px;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+                & i{
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                }
+                
+
+            }
+            &__listitem{
+                .single__option{
+                    display: block;
+                    position: relative;
+                    padding-left: 25px;
+                    margin-bottom: 8px;
+                    cursor: default;    
+                    
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                    & input{
+                                                        
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 1.2rem;
+                        width: 1.2rem;
+                       
+                    }
+                    .filteroption__bluecolor{
+                        color: blue;
+                        position: relative;
+                        left: -25px;
+                    }   
+                }
+            }
+        }
+    }
+}
+
+.flexlistoption{
+    display: flex;    
+    width: 100%;
+    box-sizing: border-box;
+    // grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    
+   
+   
+    gap: 10px;
+    flex-wrap: wrap;
+
+   .single__option__rectangle{      
+        cursor: pointer;      
+        padding: 21px;
+       
+        border: 1px solid #333;
+      
+   }
+}

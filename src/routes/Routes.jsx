@@ -16,8 +16,8 @@ const RootRoutes = () => {
       <Routes>
         <Route path="/" exact element={<Home />} />
         <Route path="/men" exact element={<Men />} />
-        <Route path="/new" exact element={<New />} />
-        <Route path="/women" exact element={<Women />} />
+        <Route path="/new" exact element={<New/>} />
+        <Route path="/women" exact element={<Women/>} />
       </Routes>
       <Footer/>
       </div>
