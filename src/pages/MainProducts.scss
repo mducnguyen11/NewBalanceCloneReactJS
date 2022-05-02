@@ -1,10 +1,14 @@
+@import '../sass/index.scss';
+
 .productsPage{
-    flex: 1;
     
-    margin-right: 40px;
-    margin-top:50px;
-    margin-left: 40px;
+    width: 75%;           
+    
+    margin: auto;
     margin-bottom: 50px;
+    @include tablet{
+        width: 90%;
+    } 
     .productsPage__header{
        
         display: flex;
@@ -12,6 +16,7 @@
         align-items: center;
         font-size: 1.1rem;
         margin-bottom: 20px;
+        margin-right: 40px;
         
 
         &__operation{
@@ -24,6 +29,9 @@
                 gap: 10px;
                 align-items: center;
                 cursor: pointer;
+                @include tablet{
+                    display: none;
+                }
             }
 
             & select{

@@ -95,6 +95,16 @@
                 display: none;
             }
         }
+        &__navbar__tablet{
+            display: none;
+            @include tablet{
+                display: block;        
+               
+            }
+            padding: 10px 0px;
+            background-color: white;
+            
+        }
         &__navbar__item{
              font-size: 1rem;
              font-weight: bold;

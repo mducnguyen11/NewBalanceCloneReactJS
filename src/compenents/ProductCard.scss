@@ -42,6 +42,7 @@
 
         &__nextProduct{
             padding: 5px 5px;
+            cursor: pointer;
             
             & i {
                 font-size: 2rem;
@@ -49,6 +50,7 @@
         }
         &__preProduct{
             padding: 5px 5px;
+            cursor: pointer;
             
             & i {
                 font-size: 2rem;

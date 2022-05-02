@@ -36,9 +36,9 @@ const MainProducts = (props) => {
       </div>
       <div className=" productsPage__container">
           {
-            DataProducts.map((a)=>{
+            DataProducts.map((a,index)=>{
               return(
-                <ProductCard {...a}/>
+                <ProductCard {...a } index = {index}/>
               )
             })
           }

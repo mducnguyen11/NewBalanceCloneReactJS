@@ -7,6 +7,10 @@
     & img{
         width: 100%;
     }
+
+    @include tablet{
+        padding-top: 30px;
+    }
     
     &__content{
         position: absolute;

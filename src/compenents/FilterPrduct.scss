@@ -3,6 +3,10 @@
 
 
 .filterproduct{
+   
+    @include tablet{
+        display: none;
+    }
 
     & input{
         position: absolute;
@@ -16,10 +20,8 @@
 
     display: inline-block;
     width: 25%;
-    
-   
     padding-left: 40px;
-    padding-right: 0px;
+    padding-right: 20px;
     margin-bottom: 50px;
 
     & h6{

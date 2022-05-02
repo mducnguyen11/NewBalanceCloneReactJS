@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 // import required modules
 import { Pagination, Navigation } from "swiper";
 
-const ProductCard = ({img,name,price,type,listColor}) => {
+const ProductCard = ({img,name,price,type,listColor , index}) => {
   return (
     <div className="productcard">
       <img
@@ -23,7 +23,7 @@ const ProductCard = ({img,name,price,type,listColor}) => {
         <p>{type}</p>
       </div>
       <div className="productcard__slide">
-        <div className="productcard__slide__preProduct">
+        <div className={"productcard__slide__preProduct productcard__slide__preProduct__"+index}>
           <i class="bx bx-chevron-left"></i>
         </div>
         <div className="productcard__slide__mainSlide">
@@ -32,8 +32,8 @@ const ProductCard = ({img,name,price,type,listColor}) => {
         spaceBetween={10}
         pagination={false}
         navigation={{
-          nextEl:'.productcard__slide__nextProduct',
-          prevEl: '.productcard__slide__preProduct'
+          nextEl:'.productcard__slide__nextProduct__'+index,
+          prevEl: '.productcard__slide__preProduct__'+index
         }}
         breakpoints={{
           
@@ -67,7 +67,7 @@ const ProductCard = ({img,name,price,type,listColor}) => {
         
       </Swiper>
         </div>
-        <div className="productcard__slide__nextProduct">
+        <div className={" productcard__slide__nextProduct productcard__slide__nextProduct__"+index}>
           <i class="bx bx-chevron-right"></i>
         </div>
       </div>

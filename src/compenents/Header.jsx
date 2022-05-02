@@ -94,6 +94,19 @@ const Header = () => {
             </div>
           </div>
         </div>
+        <div className="header__tablet">
+        <div className="header__navbar header__navbar__tablet">
+            <div className="header__navbar__list">
+              {mainNav.map((item, index) => {
+                return (
+                  <Link key={index} to={item.path}>
+                    <span className="header__navbar__item">{item.display}</span>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

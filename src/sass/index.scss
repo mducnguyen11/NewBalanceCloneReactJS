@@ -20,6 +20,9 @@
 }
 .spaceTop{
     margin-top: $header-height + 37px;
+    @include tablet{
+        margin-top: $header-height + 87px;
+    }
 }
 
 @forward  '/src/compenents/Header.scss';
