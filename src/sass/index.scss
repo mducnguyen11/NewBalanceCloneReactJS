@@ -24,5 +24,8 @@
         margin-top: $header-height + 87px;
     }
 }
+.disabled{
+    display: none
+}
 
 @forward  '/src/compenents/Header.scss';

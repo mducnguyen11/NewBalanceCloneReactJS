@@ -5,12 +5,14 @@ import New from "../pages/New";
 import Home from "../pages/Home";
 import Header from "../compenents/Header";
 import Footer from "../compenents/Footer";
+import ScrollToTop from "../pages/ScrollToTop";
 
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 
 const RootRoutes = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter >
+      <ScrollToTop/>
       <div className="all">
       <Header/>
       <Routes>
@@ -21,6 +23,7 @@ const RootRoutes = () => {
       </Routes>
       <Footer/>
       </div>
+      
     </BrowserRouter>
   );
 };

@@ -1,5 +1,7 @@
 import "./Header.scss";
 import { Link } from "react-router-dom";
+import { useRef , useEffect } from "react";
+
 
 const HeaderBannerData = {
   display: "Free shipping on orders $50+Details",
@@ -9,8 +11,28 @@ const HeaderBannerData = {
 };
 
 const HeaderBanner = (props) => {
+
+  const HeaderBannerRef = useRef(null);
+
+  // useEffect(()=>{
+
+  //   window.addEventListener("scroll", ()=>{
+  //     if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
+  //         HeaderBannerRef.current.classList.add('disabled')
+  //     }else{
+  //       HeaderBannerRef.current.classList.remove('disabled')
+
+  //     }
+
+  //     return ()=>{
+  //       window.removeEventListener("scroll")
+  //     }
+  //   })
+
+  // },[])
+
   return (
-    <div className="header__banner__bg">
+    <div ref={HeaderBannerRef} className="header__banner__bg">
       <div className="header__banner container">
         <div className="header__banner__content">
           <span>{props.bannerContent.display}</span>
@@ -46,6 +68,9 @@ const mainNav = [
 ];
 
 const Header = () => {
+
+  
+
   return (
     <div className="main__header">
       <HeaderBanner bannerContent={HeaderBannerData} />
