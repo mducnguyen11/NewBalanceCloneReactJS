@@ -7,12 +7,15 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Pagination, Navigation } from "swiper";
+import { useState } from "react";
 
 const ProductCard = ({img,name,price,type,listColor , index}) => {
+
+  const [currentImg , setCurrentImg] = useState(null)
   return (
     <div className="productcard">
       <img
-        src={img}
+        src={currentImg != null? currentImg : img}
         alt=""
       />
       <div className="productcard__info">
@@ -23,9 +26,9 @@ const ProductCard = ({img,name,price,type,listColor , index}) => {
         <p>{type}</p>
       </div>
       <div className="productcard__slide">
-        <div className={"productcard__slide__preProduct productcard__slide__preProduct__"+index}>
+       {listColor.length > 5? <div className={"productcard__slide__preProduct productcard__slide__preProduct__"+index}>
           <i class="bx bx-chevron-left"></i>
-        </div>
+        </div> : null}
         <div className="productcard__slide__mainSlide">
         <Swiper
         slidesPerView={7}
@@ -59,7 +62,16 @@ const ProductCard = ({img,name,price,type,listColor , index}) => {
        {
          listColor?.map((a)=>{
            return(
-            <SwiperSlide> <a href="#"> <img src={a.img} alt="" /></a></SwiperSlide>
+            <SwiperSlide> <a
+             onMouseLeave={()=>{
+              setCurrentImg(img)
+             }}
+            onMouseMove={()=>{ 
+              if(currentImg != a.img){
+                
+                setCurrentImg(a.img)
+              }
+            }} href="#">  <img src={a.img} alt="" /></a></SwiperSlide>
            )
 
          })
@@ -67,9 +79,11 @@ const ProductCard = ({img,name,price,type,listColor , index}) => {
         
       </Swiper>
         </div>
-        <div className={" productcard__slide__nextProduct productcard__slide__nextProduct__"+index}>
+        {
+          listColor.length > 5?<div className={" productcard__slide__nextProduct productcard__slide__nextProduct__"+index}>
           <i class="bx bx-chevron-right"></i>
-        </div>
+        </div>:null
+        }
       </div>
     </div>
   );

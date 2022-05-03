@@ -1,6 +1,6 @@
 import "./MainProducts.scss";
 import ProductCard from "../compenents/ProductCard";
-import { useState } from "react";
+import { useState , useEffect } from "react";
 
 
 
@@ -10,9 +10,9 @@ const MainProducts = (props) => {
 
     // const [DataProducts , setDataProducts] = useState(FakeDataListProducts)
 
-    const FilterProduct = (a) =>{
+  
+   
 
-    }
   return (
     <div className="productsPage">
       <div className="productsPage__header">

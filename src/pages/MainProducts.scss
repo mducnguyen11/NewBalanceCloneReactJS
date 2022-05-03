@@ -2,12 +2,12 @@
 
 .productsPage{
     
-    width: 75%;           
-    
-    margin: auto;
+    width: 75%;
     margin-bottom: 50px;
     @include tablet{
         width: 90%;
+        margin: auto;
+        margin-bottom: 50px;
     } 
     .productsPage__header{
        
