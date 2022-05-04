@@ -601,6 +601,7 @@ const New = ()=>{
       console.log(newdata)
       
       setPresentProducts([...newdata])
+      window.scrollTo(0, 0);
 
     }
 
